@@ -1,9 +1,10 @@
 var color;
+var isform = document.getElementById("WC");
 
 function wc(){
     color = document.forms.WC.elements.color.value;
-    document.getElementById("pie").innerHTML = color;
+    document.body.style.backgroundColor = color;
 
 }
 
-document.getElementById("WC").onsubmit = function(){wc()};
+isform.onsubmit = function(){wc(); return false;};
